@@ -1,0 +1,54 @@
+{% extends 'base_app.html.twig' %}
+{% block title %} Edit Users{% endblock title %}
+
+
+{% block content %}
+<main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Edit User</h1>
+     
+    </div>
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-6">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Modification Utilisateur</h5>
+
+              {{ form_start(form) }}
+              <div class="row mb-3">
+                <div class="col-sm-12">
+                  {{ form_row(form.lastname) }}
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-sm-12">
+                  {{ form_row(form.adresse) }}
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-sm-12">
+                  {{ form_row(form.email) }}
+                </div>
+              </div>
+              
+              <div class="row mb-3">
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-primary">Modifier</button>
+                </div>
+              </div>
+              {{ form_end(form) }}
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+{% endblock content %}
